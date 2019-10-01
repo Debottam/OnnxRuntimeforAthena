@@ -11,7 +11,8 @@
 
 **Building onnxruntime from source using cmake**
 Dependencies
-* protobuf 3.6.1 and higher (tensorflow comes with a built in)
+* cmake-3.13 and higher
+* protobuf 3.6.1 and higher 
 * Python 3.5 and higher
 * gcc>=5.0
 
