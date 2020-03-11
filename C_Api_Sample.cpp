@@ -37,14 +37,8 @@ int main(int argc, char* argv[]) {
   // Sets graph optimization level
   g_ort->SetSessionGraphOptimizationLevel(session_options, ORT_ENABLE_BASIC);
 
-  // Optionally add more execution providers via session_options
-  // E.g. for CUDA include cuda_provider_factory.h and uncomment the following line:
-  // OrtSessionOptionsAppendExecutionProvider_CUDA(sessionOptions, 0);
-
   //*************************************************************************
   // create session and load model into memory
-  // using squeezenet version 1.3
-  // URL = https://github.com/onnx/models/tree/master/squeezenet
   OrtSession* session;
   const char* model_path = "/afs/cern.ch/work/d/dbakshig/public/OnnxRuntimeforAthena/saved_mnist/saved_model.onnx";
 
@@ -137,8 +131,6 @@ int main(int argc, char* argv[]) {
     g_ort->ReleaseTypeInfo(typeinfo);
   }
 
-  //g_ort->ReleaseValue(output_tensor);
-  //g_ort->ReleaseValue(input_tensor);
   g_ort->ReleaseSession(session);
   g_ort->ReleaseSessionOptions(session_options);
   g_ort->ReleaseEnv(env);

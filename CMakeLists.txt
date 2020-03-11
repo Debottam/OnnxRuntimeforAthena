@@ -5,7 +5,7 @@ set(CMAKE_CXX_FLAGS "-std=c++14")
 set(PROJECT_LINK_LIBS libonnxruntime.so)
 link_directories(/afs/cern.ch/work/d/dbakshig/public/onnxExternal/build/)
 include_directories(/afs/cern.ch/work/d/dbakshig/public/Onnx/onnxruntime/include/onnxruntime/core/session/)
-add_executable(C_Api_Sample /afs/cern.ch/work/d/dbakshig/public/Onnx/C_Api_Sample.cpp)
+add_executable(C_Api_Sample /afs/cern.ch/work/d/dbakshig/public/OnnxRuntimeforAthena/C_Api_Sample.cpp)
 target_link_libraries(C_Api_Sample ${PROJECT_LINK_LIBS})
 
 
