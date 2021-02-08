@@ -23,7 +23,7 @@ This section includes
  I have trained a tf.keras model to predict handwritten digits using MNIST dataset for handwritten digits and coverted that model to .onnx format
 * **saved_model.onnx:**
  onnx model generated from previous step
-* **C_Api_Sample4.cpp:**
+* **Cpp_Api.cpp:**
  c/c++ API of onnx_runtime to use onnx model for scoring
  
  The **saved_model.onnx:** model has following dimention
